@@ -1,0 +1,76 @@
+C:\Users\Manish.Gupta\AppData\Local\Programs\Python\Python310\python.exe C:\Users\Manish.Gupta\Pictures\Pyspark_code_workspace\stock\earthquakes_assignment.py 
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/02/17 13:10:04 WARN ProcfsMetricsGetter: Exception when trying to compute pagesize, as a result reporting of ProcessTree metrics is stopped
++-----------------+------------------+------------------+
+|             Type|         avg_depth|     avg_magnitude|
++-----------------+------------------+------------------+
+|        Explosion|               0.0| 5.849999904632568|
+|       Rock Burst|               1.0| 6.199999809265137|
+|Nuclear Explosion|0.3000000006811959|5.8506857109069825|
+|       Earthquake| 71.31391348824346| 5.882762548783101|
++-----------------+------------------+------------------+
+
+root
+ |-- Date: string (nullable = true)
+ |-- Time: string (nullable = true)
+ |-- Latitude: float (nullable = true)
+ |-- Longitude: float (nullable = true)
+ |-- Type: string (nullable = true)
+ |-- Depth: float (nullable = true)
+ |-- Magnitude: float (nullable = true)
+ |-- TimeStamp: timestamp (nullable = true)
+
+root
+ |-- Date: string (nullable = true)
+ |-- Time: string (nullable = true)
+ |-- Latitude: float (nullable = true)
+ |-- Longitude: float (nullable = true)
+ |-- Type: string (nullable = true)
+ |-- Depth: float (nullable = true)
+ |-- Magnitude: float (nullable = true)
+ |-- TimeStamp: timestamp (nullable = true)
+ |-- Level: string (nullable = true)
+ |-- distance: float (nullable = true)
+
+Traceback (most recent call last):
+  File "C:\Users\Manish.Gupta\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\Manish.Gupta\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Software\spark-3.1.2-bin-hadoop3.2\python\lib\pyspark.zip\pyspark\worker.py", line 656, in <module>
+  File "C:\Software\spark-3.1.2-bin-hadoop3.2\python\lib\pyspark.zip\pyspark\worker.py", line 643, in main
+  File "C:\Software\spark-3.1.2-bin-hadoop3.2\python\lib\pyspark.zip\pyspark\serializers.py", line 564, in read_int
+EOFError
++----------+--------+--------+---------+----------+-----+---------+-------------------+--------+---------+
+|      Date|    Time|Latitude|Longitude|      Type|Depth|Magnitude|          TimeStamp|   Level| distance|
++----------+--------+--------+---------+----------+-----+---------+-------------------+--------+---------+
+|01/02/1965|13:44:18|  19.246|  145.616|Earthquake|131.6|      6.0|1965-01-02 13:44:18|Moderate|14165.123|
+|01/04/1965|11:29:49|   1.863|  127.352|Earthquake| 80.0|      5.8|1965-01-04 11:29:49|     Low| 12957.01|
+|01/05/1965|18:05:58| -20.579| -173.972|Earthquake| 20.0|      6.2|1965-01-05 18:05:58|Moderate|18764.238|
+|01/08/1965|18:49:43| -59.076|  -23.557|Earthquake| 15.0|      5.8|1965-01-08 18:49:43|     Low| 8247.342|
+|01/09/1965|13:32:50|  11.938|  126.427|Earthquake| 15.0|      5.8|1965-01-09 13:32:50|     Low|12580.022|
+|01/10/1965|13:36:32| -13.405|  166.629|Earthquake| 35.0|      6.7|1965-01-10 13:36:32|Moderate|17443.504|
+|01/12/1965|13:32:25|  27.357|   87.867|Earthquake| 20.0|      5.9|1965-01-12 13:32:25|     Low| 8307.825|
+|01/15/1965|23:17:42| -13.309|  166.212|Earthquake| 35.0|      6.0|1965-01-15 23:17:42|Moderate|17399.684|
+|01/16/1965|11:32:37| -56.452|  -27.043|Earthquake| 95.0|      6.0|1965-01-16 11:32:37|Moderate|8135.1494|
+|01/17/1965|10:43:17| -24.563|  178.487|Earthquake|565.0|      5.8|1965-01-17 10:43:17|     Low|17988.852|
+|01/17/1965|20:57:41|  -6.807|  108.988|Earthquake|227.9|      5.9|1965-01-17 20:57:41|     Low|11117.572|
+|01/24/1965|00:11:17|  -2.608|  125.952|Earthquake| 20.0|      8.2|1965-01-24 00:11:17|    High|12898.991|
+|01/29/1965|09:35:30|  54.636|  161.703|Earthquake| 55.0|      5.5|1965-01-29 09:35:30|     Low| 12355.53|
+|02/01/1965|05:27:06| -18.697| -177.864|Earthquake|482.9|      5.6|1965-02-01 05:27:06|     Low|18730.107|
+|02/02/1965|15:56:51|  37.523|   73.251|Earthquake| 15.0|      6.0|1965-02-02 15:56:51|Moderate| 6981.542|
+|02/04/1965|03:25:00|  -51.84|  139.741|Earthquake| 10.0|      6.1|1965-02-04 03:25:00|Moderate|13532.975|
+|02/04/1965|05:01:22|  51.251|  178.715|Earthquake| 30.3|      8.7|1965-02-04 05:01:22|    High|13118.003|
+|02/04/1965|06:04:59|  51.639|  175.055|Earthquake| 30.0|      6.0|1965-02-04 06:04:59|Moderate|13012.386|
+|02/04/1965|06:37:06|  52.528|  172.007|Earthquake| 25.0|      5.7|1965-02-04 06:37:06|     Low|12853.628|
+|02/04/1965|06:39:32|  51.626|  175.746|Earthquake| 25.0|      5.8|1965-02-04 06:39:32|     Low|13027.072|
++----------+--------+--------+---------+----------+-----+---------+-------------------+--------+---------+
+only showing top 20 rows
+
+SUCCESS: The process with PID 8364 (child process of PID 2500) has been terminated.
+SUCCESS: The process with PID 2500 (child process of PID 12616) has been terminated.
+SUCCESS: The process with PID 12616 (child process of PID 1728) has been terminated.
+
+Process finished with exit code 0
